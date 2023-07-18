@@ -11,6 +11,13 @@ import torch.distributed as dist
 import sys
 import datetime
 
+'''Not sure whether this is helping, but keeping it makes no harm'''
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:1024"
+torch.cuda.empty_cache() 
+os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
+'''End'''
+
+
 ROOT = os.getcwd()
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))

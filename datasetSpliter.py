@@ -2,9 +2,10 @@ import os, random, shutil
 
 
 TEST_RATIO = 0.1
-VAL_RATIO = 0.2
+VAL_RATIO = 0.1
 
-SRC = './forImgClassifyCompressed'
+# SRC = './forImgClassifyCompressed'
+SRC = './forImgClassify'
 DST = './custom_dataset'
 
 SRC_I = os.path.join(SRC, 'img')
@@ -68,6 +69,8 @@ for i in range(int(len(img0_list) * TEST_RATIO)):
     dst_l0 = os.path.join(DST_LTEST, label0_list[ii])
     dst_i1 = os.path.join(DST_ITEST, img1_list[ii])
     dst_l1 = os.path.join(DST_LTEST, label1_list[ii])
+    dst_l0 = dst_l0[:-4] + 'txt'
+    dst_l1 = dst_l1[:-4] + 'txt'
     shutil.copy(src_i0, dst_i0)
     shutil.copy(src_l0, dst_l0)
     shutil.copy(src_i1, dst_i1)
@@ -88,6 +91,8 @@ for i in range(int(len(img0_list) * VAL_RATIO)):
     dst_l0 = os.path.join(DST_LVAL, label0_list[ii])
     dst_i1 = os.path.join(DST_IVAL, img1_list[ii])
     dst_l1 = os.path.join(DST_LVAL, label1_list[ii])
+    dst_l0 = dst_l0[:-4] + 'txt'
+    dst_l1 = dst_l1[:-4] + 'txt'
     shutil.copy(src_i0, dst_i0)
     shutil.copy(src_l0, dst_l0)
     shutil.copy(src_i1, dst_i1)
@@ -108,6 +113,8 @@ for i in range(idx, len(img0_list)):
     dst_l0 = os.path.join(DST_LTRAIN, label0_list[ii])
     dst_i1 = os.path.join(DST_ITRAIN, img1_list[ii])
     dst_l1 = os.path.join(DST_LTRAIN, label1_list[ii])
+    dst_l0 = dst_l0[:-4] + 'txt'
+    dst_l1 = dst_l1[:-4] + 'txt'
     shutil.copy(src_i0, dst_i0)
     shutil.copy(src_l0, dst_l0)
     shutil.copy(src_i1, dst_i1)

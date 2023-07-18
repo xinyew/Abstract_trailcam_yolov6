@@ -1,4 +1,5 @@
 forImgClassifyCompressed/
+forImgClassify/
 custom_dataset/
 # Byte-compiled / optimized / DLL files
 __pycache__/
