@@ -4,8 +4,8 @@ import os, random, shutil
 TEST_RATIO = 0.1
 VAL_RATIO = 0.1
 
-# SRC = './forImgClassifyCompressed'
-SRC = './forImgClassify'
+SRC = './forImgClassifyCompressed'
+# SRC = './forImgClassify'
 DST = './custom_dataset'
 
 SRC_I = os.path.join(SRC, 'img')

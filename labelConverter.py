@@ -1,10 +1,10 @@
 import json, os
 
-# PATH = './forImgClassifyCompressed/labels'
-# PATH_STORE = './forImgClassifyCompressed/convertedLabels'
+PATH = './forImgClassifyCompressed/labels'
+PATH_STORE = './forImgClassifyCompressed/convertedLabels'
 
-PATH = './forImgClassify/labels'
-PATH_STORE = './forImgClassify/convertedLabels'
+# PATH = './forImgClassify/labels'
+# PATH_STORE = './forImgClassify/convertedLabels'
 
 PATH0 = os.path.join(PATH, '0')
 PATH1 = os.path.join(PATH, '1')
